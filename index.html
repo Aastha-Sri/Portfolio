@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aastha - Developer Portfolio</title>
+    <style>
+        /* Reset and global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+            min-height: 100vh;
+            color: antiquewhite;
+            background-color: rgb(0, 0, 56);
+        }
+
+        /* Video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Header and Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(4, 4, 120, 0.8);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.09rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(149, 149, 235);
+            font-size: 1.02rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        /* Main Content Sections */
+        .section {
+            padding: 40px 120px;
+            min-height: 100vh;
+        }
+
+        #home {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 110px 0;
+        }
+
+        .leftSection {
+            font-size: 2rem;
+        }
+
+        .buttons {
+            padding: 50px 0;
+        }
+
+        .btn {
+            padding: 12px;
+            color: white;
+            background: #1e2167;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .rightSection img {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .purple {
+            color: rgb(146, 66, 221);
+        }
+
+        #element {
+            color: rgb(146, 66, 221);
+        }
+
+        footer {
+            background-color: rgb(2, 2, 26);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 23px 122px;
+        }
+
+        .footer-rights {
+            color: grey;
+        }
+
+        section p,
+        section ul {
+            font-size: 1.2em;
+            /* Larger font size for section content */
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+            /* Adjust to your preference */
+
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(188, 156, 219);
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        /* Section Titles */
+        .section h1 {
+            font-size: 2.5em;
+            /* Larger font size for section titles */
+            margin-bottom: 20px;
+            color: #456dd5;
+            text-align: center;
+        }
+
+        /* Section Content */
+        .section p,
+        .section ul {
+            font-size: 1.2em;
+            /* Larger font size for section content */
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+            /* Adjust to your preference */
+            padding: 0 20px;
+        }
+
+        /* Links */
+        .section a {
+            color: #fff;
+            /* Set link color to white */
+            text-decoration: none;
+            /* Remove underline */
+        }
+
+        .section a:hover {
+            color: rgb(149, 149, 235);
+            font-size: 1.1rem;
+        }
+
+        .section h3 {
+            font-size: 1.8em;
+            line-height: 1.8;
+            margin: 40px 120px;
+            text-align: justify;
+            padding: 0 20px;
+
+
+        }
+
+        /* Section Content */
+        .section p,
+        .section ul {
+            font-size: 1.2em;
+            /* Larger font size for section content */
+            line-height: 1.8;
+            margin: 40px 120px;
+            text-align: justify;
+            /* Adjust to your preference */
+            padding: 0 20px;
+        }
+
+        /* for responsive website*/
+        @media (min-width: 768px) {
+            #home {
+                flex-wrap: nowrap;
+                text-align: left;
+            }
+
+            .leftSection,
+            .rightSection {
+                flex: 1;
+                margin-bottom: 0;
+            }
+
+            .rightSection img {
+                max-width: 500px;
+            }
+
+            .buttons {
+                justify-content: start;
+            }
+
+            footer {
+                display: flex;
+                justify-content: space-between;
+                text-align: left;
+            }
+
+            .footer-first,
+            .footer-second {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-background">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <nav>
+            <div class="left">Aastha's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <div class="leftSection">
+                <div>Hi! my name is <span class="purple">Aastha</span></div>
+                <div>And I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="Aastha_2021ume1255.pdf" class="btn" target="_blank">Download Resume</a>
+                    <a href="https://github.com/Aastha-Sri " class="btn" target="_blank">Visit Github</a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section id="about" class="section">
+            <h1>About Me</h1>
+            <p>
+                Hi, I'm <strong>Aastha Srivastava</strong>, a final undergraduate student at NIT Jaipur. I am deeply
+                interested in web development and have a strong background
+                in both frontend and backend technologies. I am passionate about creating innovative web solutions and
+                continuously improving my skills.
+            </p>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><strong>Languages:</strong> Python, C, C++, JavaScript, R, Solidity</li>
+                <li><strong>Web Development:</strong> Node.js, Express.js, MongoDB, SQL, HTML 5, CSS 3, JavaScript,
+                    Bootstrap 5, APIs, Web3 Development on Internet Computer, Blockchain Technology</li>
+                <li><strong>Tools and Utilities:</strong> Git, R Studio, Witness Horizon, SPSS, Visual Studio,
+                    PyScripter</li>
+            </ul>
+
+        </section>
+        <hr>
+        <section id="services" class="section">
+            <h1>Services</h1>
+            <ul>
+                <li><strong>Web Development:</strong> Creating robust and scalable web applications using modern web
+                    technologies.</li>
+                <li><strong>Web Design:</strong> Designing user-centric interfaces with a focus on usability and
+                    aesthetics.</li>
+                <li><strong>Technical Projects:</strong> Developing simulations and tools to visualize and solve
+                    technical problems.</li>
+                <li><strong>Problem Solving:</strong> Crafting efficient algorithms to tackle complex challenges.</li>
+            </ul>
+
+        </section>
+        <hr>
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+            <ul>
+                <li>
+                    <strong>Blog Website</strong>
+                    <p>A platform for daily journaling and diary keeping, built with Node.js, HTML, CSS, JavaScript, and
+                        MongoDB.</p>
+                </li>
+                <li>
+                    <strong>Sorting Visualizer</strong>
+                    <p>An interactive tool for visualizing sorting algorithms, using HTML, CSS, JavaScript, and SVG.</p>
+                </li>
+                <li>
+                    <strong>Vibration Simulator</strong>
+                    <p>A Python-based simulation tool to analyze mechanical vibrations with a user-friendly web
+                        interface.</p>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <section id="contact" class="section">
+            <h1>Contact Me</h1>
+            <p>You can reach me at:</p>
+            <ul>
+                <li>Email: <a href="mailto:aastha22sri@gmail.com">aastha22sri@gmail.com</a></li>
+                <li>Phone: +91 6387857946</li>
+                <li>LinkedIn: <a
+                        href="https://www.linkedin.com/in/aastha-srivastava-4a4bbb280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Aastha-Sri</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Aastha's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+            <div class="footer-third"></div>
+            <div class="footer-fourth"></div>
+        </div>
+        <div class="footer-rights">
+            Aastha'sPortfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer'],
+            typeSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
