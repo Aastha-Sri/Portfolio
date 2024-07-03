@@ -232,6 +232,8 @@
             padding: 0 20px;
         }
 
+        
+
         /* for responsive website*/
 
         @media screen and (max-width: 600px) {
@@ -338,6 +340,117 @@
             .footer-second {
                 margin-top: 10px; /* Space between sections on small screens */
             }
+
+            /*for mobile phones */
+
+            @media screen and (max-width: 480px) {
+
+                .video-background {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    z-index: -1;
+                }
+
+                .btn {
+                    padding: 20px;
+
+                }
+
+
+                nav {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                body {
+                    overflow-x: hidden;
+                    /* Hide horizontal scrollbar */
+                }
+
+
+                nav ul {
+                    display: flex;
+                    list-style: inside;
+                }
+
+                nav ul li {
+                    margin: 0 11px;
+                    display: inline-block;
+
+                }
+
+                nav ul li a {
+                    margin: 0 3px;
+                    font-size: 0.7em;
+
+                }
+
+                main hr {
+                    border: 0;
+                    background: rgb(188, 156, 219);
+                    height: 1.2px;
+                    margin: 20px 20px;
+                }
+
+                .section {
+                    padding: 2px 0;
+                    min-height: 80vh;
+                }
+
+            }
+
+
+            #projects h1 {
+                margin-bottom: 10px;
+                /* Less space below heading on small screens */
+            }
+
+            #projects ul li {
+                padding: 5px;
+                /* Less padding on small screens */
+                margin-bottom: 25px;
+                /* Less space between projects */
+            }
+
+            #projects li strong {
+                font-size: 1.2em;
+                /* Smaller title font on small screens */
+                margin-bottom: 3px;
+                /* Less space between title and description */
+            }
+
+            #projects ul li p {
+                font-size: 1em;
+                /* Smaller title font on small screens */
+                padding: 10px 5px;
+                margin: 1.2px;
+            }
+
+            .footer {
+                flex-direction: column;
+                /* Stack items vertically on small screens */
+                text-align: center;
+                /* Center text */
+            }
+
+            .footer-second ul {
+                justify-content: center;
+                /* Center list items on small screens */
+
+            }
+
+
+
+            .footer-second {
+                margin-top: 10px;
+                /* Space between sections on small screens */
+            }
+
+
         }
     </style>
 </head>
