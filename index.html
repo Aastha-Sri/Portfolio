@@ -344,116 +344,71 @@
             /*for mobile phones */
 
             @media screen and (max-width: 480px) {
+    /* Background video settings */
+    .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
 
-                .video-background {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    min-width: 100%;
-                    min-height: 100%;
-                    z-index: -1;
-                }
+    /* Adjusting video dimensions to fit viewport */
+    .background-video {
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+    }
 
-                .background-video {
-                    width: 100%;
-                    height: 100vh;
-                }
+    /* Horizontal alignment and styling for navigation */
+    nav {
+        background-color: transparent; /* Remove background color */
+        text-align: center; /* Center align navigation items */
+        margin: 0; /* Reset margin */
+        padding: 10px 0; /* Add padding for spacing */
+    }
 
-                .btn {
-                    padding: 20px;
+    nav ul {
+        display: flex; /* Display items horizontally */
+        justify-content: center; /* Center align navigation items */
+        list-style-type: none; /* Remove bullets */
+        padding: 0; /* Reset padding */
+    }
 
-                }
+    nav ul li {
+        margin: 0 10px; /* Adjust spacing between navigation items */
+    }
 
+    nav ul li a {
+        text-decoration: none; /* Remove underline from links */
+        color: #333; /* Set link color */
+        font-size: 14px; /* Adjust font size */
+        padding: 10px; /* Add padding for clickable area */
+    }
 
-                nav {
-                    list-style-type: none;
-                    margin: 0;
-                    padding: 0;
-                }
+    /* Adjustments for sections */
+    .section {
+        padding: 20px 10px; /* Adjust padding */
+        min-height: auto; /* Allow content to expand naturally */
+    }
 
-                body {
-                    overflow-x: hidden;
-                    /* Hide horizontal scrollbar */
-                }
+    /* Adjustments for hr element */
+    main hr {
+        margin: 10px auto; /* Center hr element */
+    }
 
+    /* Footer adjustments */
+    .footer {
+        text-align: center; /* Center align content */
+    }
 
-                nav ul {
-                    display: flex;
-                    list-style: inside;
-                }
+    .footer-second ul {
+        display: flex; /* Display items horizontally */
+        justify-content: center; /* Center align items */
+        padding: 10px 0; /* Add padding */
+    }
+}
 
-                nav ul li {
-                    margin: 0 11px;
-                    display: inline-block;
-
-                }
-
-                nav ul li a {
-                    margin: 0 3px;
-                    font-size: 1em;
-
-                }
-
-                main hr {
-                    border: 0;
-                    background: rgb(188, 156, 219);
-                    height: 1.2px;
-                    margin: 20px 20px;
-                }
-
-                .section {
-                    padding: 2px 0;
-                    min-height: 80vh;
-                }
-
-            }
-
-
-            #projects h1 {
-                margin-bottom: 10px;
-                /* Less space below heading on small screens */
-            }
-
-            #projects ul li {
-                padding: 5px;
-                /* Less padding on small screens */
-                margin-bottom: 25px;
-                /* Less space between projects */
-            }
-
-            #projects li strong {
-                font-size: 1.2em;
-                /* Smaller title font on small screens */
-                margin-bottom: 3px;
-                /* Less space between title and description */
-            }
-
-            #projects ul li p {
-                font-size: 1em;
-                /* Smaller title font on small screens */
-                padding: 10px 5px;
-                margin: 1.2px;
-            }
-
-            .footer {
-                flex-direction: column;
-                /* Stack items vertically on small screens */
-                text-align: center;
-                /* Center text */
-            }
-
-            .footer-second ul {
-                justify-content: center;
-                /* Center list items on small screens */
-
-            }
-
-
-
-            .footer-second {
-                margin-top: 10px;
-                /* Space between sections on small screens */
-            }
 
 
         }
