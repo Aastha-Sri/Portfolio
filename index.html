@@ -236,7 +236,50 @@
 
         /* for responsive website*/
 
-        @media screen and (max-width: 600px) {
+         @media screen and (max-width: 1000px) {
+
+            .section p,
+            .section ul {
+                font-size: 30px;
+            }
+
+            .section h3 {
+                font-size: 48px;
+            }
+
+            .section h1 {
+                font-size: 48px;
+            }
+
+            * {
+                font-size: larger;
+            }
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+
+            li {
+                list-style: none;
+                font-size: 1em;
+                padding: 10px 5px;
+                margin: 1.2px;
+            }
+
+            .left {
+                font-size: larger;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+
+            }
 
             .video-background {
                 position: fixed;
@@ -244,7 +287,6 @@
                 left: 0;
                 width: 100%;
                 height: 100vh;
-                overflow: hidden;
                 z-index: -1;
             }
 
@@ -259,7 +301,8 @@
                 text-decoration: none;
                 display: flex;
                 margin-right: 5px;
-                margin: 18px 0; 
+                margin: 18px 0;
+                font-size: xx-large;
 
             }
 
@@ -270,6 +313,8 @@
                 align-items: center;
                 height: 80px;
                 padding: 0 10px;
+                flex-direction: column;
+                height: 120px;
             }
 
             body {
@@ -284,149 +329,153 @@
             }
 
             nav ul li {
-            margin: 0 11px;
-        }
+                margin: 0 0;
+            }
 
             nav ul li a {
-            margin: 0 3px;
-            
-        }
+                margin: auto;
+                padding: 0 24px;
+                font-size: 30px;
 
-        main hr {
-            border: 0;
-            background: rgb(188, 156, 219);
-            height: 1.2px;
-            margin: 20px 20px;
-        }
+            }
 
-        .section {
-            padding: 10px 5px;
-            min-height: 100vh;
-        }
+            main hr {
+                border: 0;
+                background: rgb(188, 156, 219);
+                height: 1.2px;
+                margin: 20px 20px;
+            }
+
+            .section {
+                padding: 10px 5px;
+                min-height: 100vh;
+            }
 
 
             #projects h1 {
-                margin-bottom: 10px; /* Less space below heading on small screens */
+                margin-bottom: 10px;
+                /* Less space below heading on small screens */
             }
 
             #projects ul li {
-                padding: 5px; /* Less padding on small screens */
-                margin-bottom: 20px; /* Less space between projects */
+                padding: 5px;
+                /* Less padding on small screens */
+                margin-bottom: 20px;
+                /* Less space between projects */
             }
 
             #projects li strong {
-                font-size: 1.2em; /* Smaller title font on small screens */
-                margin-bottom: 3px; /* Less space between title and description */
+                font-size: 1.2em;
+                /* Smaller title font on small screens */
+                margin-bottom: 3px;
+                /* Less space between title and description */
             }
 
             #projects ul li p {
-                font-size: 1em; /* Smaller title font on small screens */
+                font-size: 1em;
+                /* Smaller title font on small screens */
                 padding: 10px 5px;
                 margin: 1.2px;
             }
 
             .footer {
-                flex-direction: column; /* Stack items vertically on small screens */
-                text-align: center; /* Center text */
+                flex-direction: column;
+                /* Stack items vertically on small screens */
+                text-align: center;
+                /* Center text */
+                font-size: 30px;
             }
 
-            .footer-second ul {
-                justify-content:center; /* Center list items on small screens */
-            
+            .footer-second li a {
+                justify-content: center;
+                font-size: 25px;
+                /* Center list items on small screens */
+
             }
 
-            
+
 
             .footer-second {
-                margin-top: 10px; /* Space between sections on small screens */
+                margin-top: 10px;
+                /* Space between sections on small screens */
             }
+        }
 
-            /*for mobile phones */
-
-            @media screen and (max-width: 480px) {
-
-            /* Background video settings */
-            .video-background {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-            }
-
-            /* Adjusting video dimensions to fit viewport */
-            .background-video {
-                width: 100%;
-                height: 100vh;
-                /* Full viewport height */
-                object-fit: cover;
-                /* Ensure video covers entire viewport */
-            }
-
-            /* Horizontal alignment and styling for navigation */
-            nav {
-                background-color: transparent;
-                /* Remove background color */
-                text-align: center;
-                /* Center align navigation items */
-                padding: 10px 0;
-                /* Add padding for spacing */
-                border-bottom: 2px solid lavender;
-                /* Add lavender border */
-            }
-
-            nav ul {
-                list-style-type: none;
-                /* Remove bullets */
-                padding: 0;
-                /* Reset padding */
-                margin: 0;
-                /* Reset margin */
-            }
-
-            nav ul li {
-                display: block;
-                /* Display items vertically */
-                margin: 10px 0;
-                /* Adjust vertical spacing between list items */
+        @media screen and (max-width: 600px) {
+            .left {
+                font-size: 30px;
             }
 
             nav ul li a {
-                text-decoration: none;
-                /* Remove underline from links */
-                color: #333;
-                /* Set link color */
-                padding: 10px;
-                /* Add padding for clickable area */
+                margin: auto;
+                font-size: 14px;
                 display: block;
-                /* Make links full-width for touch targets */
             }
 
-            /* Adjustments for sections */
-            .section {
-                padding: 20px 10px;
-                /* Adjust padding */
-                min-height: auto;
-                /* Allow content to expand naturally */
+            nav {
+                background-color: transparent;
+                width: 100%;
+                float: left;
+                margin: 0 0 1em 0;
+                padding: 0;
+
             }
 
-            /* Footer adjustments */
-            .footer {
-                text-align: center;
-                /* Center align content */
-                padding: 20px 0;
-                /* Increase padding for spacing */
+            nav ul li a {
+                padding: 0 3px;
             }
 
-            .footer-second ul {
-                display: flex;
-                /* Display items horizontally */
-                justify-content: center;
-                /* Center align items */
-                padding: 10px 0;
-                /* Add padding */
+            html,
+            body {
+                overflow-x: hidden;
             }
+
+            body {
+                position: relative
+            }
+
+            * {
+                font-size: 22px;
+            
+            }
+
+            .btn {
+                font-size: 22px;
+            }
+
+            .section h1 {
+                font-size: 28px;
+            }
+
+            .section p,
+            .section ul {
+                font-size: 20px;
+                margin: 8px 8px;
+
+            }
+
+            .section h3 {
+                font-size: 26px;
+                margin: 8px;
+                padding: 25px;
+            }
+
+        .footer{
+            font-size: 26px;
+            padding:0;
+        }
+
+        .footer-second li a {
+                
+                font-size: 18px;
+                
+
+            }
+
+            .footer-rights{
+                font-size: 16px;
+            }
+
         }
     </style>
 </head>
